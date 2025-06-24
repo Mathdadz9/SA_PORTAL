@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: linear-gradient(90deg, #e3eafc 0%, #f5f7fa 100%);
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.10);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-size: 1.25rem;
+  border-radius: 0 0 14px 14px;
+
+  a {
+    text-decoration: none;
+    color: #4f8cff;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .navItens {
+    display: flex;
+    gap: 2rem;
+
+    .navLink {
+      color: #4f8cff;
+      padding: 0.5rem 0.8rem;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+
+      &:hover {
+        background: #e3eafc;
+        color: #0056b3;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.2rem;
+
+    .navItens {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+      margin-top: 1rem;
+
+      .navLink {
+        width: 100%;
+        padding: 0.9rem 0.5rem;
+        border-radius: 0;
+        border-top: 1px solid #e3eafc;
+      }
+      .navLink:last-child {
+        border-bottom: 1px solid #e3eafc;
+      }
+    }
+  }
+}
